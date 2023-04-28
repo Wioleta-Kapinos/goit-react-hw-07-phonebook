@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import { useDispatch } from "react-redux";
-import { filterContact } from "redux/actions";
+import { filterContact } from "redux/filterSlice";
 import css from "./Filter.module.css";
 
 export const Filter = () => {
@@ -9,8 +9,7 @@ export const Filter = () => {
     const dispatch = useDispatch();
 
     const handleChangeFilter = event => {
-        const value = event.target.value;
-        dispatch(filterContact(value));
+        dispatch(filterContact(event.target.value));
     }
 
     return (
