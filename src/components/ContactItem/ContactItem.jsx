@@ -13,7 +13,7 @@ const ContactItem = ({ contact }) => {
     return (
         <li className={css.itemList}>
             <p className={css.itemName}>{contact.name}</p>
-            <p className={css.itemNumber}>{contact.number}</p>
+            <p className={css.itemPhone}>{contact.phone}</p>
                 <button
                 className={css.btnDelete}
                 type="button"
