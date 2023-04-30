@@ -16,10 +16,7 @@ export const ContactForm = () => {
         const form = event.currentTarget;
         const name = form.elements.name.value;
         const number = form.elements.number.value;
-        console.log(name);
-        const userBook = {
-            id: nanoid(), name, number,
-        }
+
         if (contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())) {
             alert(`${name} is already in contacts.`);
             return;
