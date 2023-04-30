@@ -16,6 +16,7 @@ export const ContactForm = () => {
         const form = event.currentTarget;
         const name = form.elements.name.value;
         const number = form.elements.number.value;
+        console.log(name);
         const userBook = {
             id: nanoid(), name, number,
         }
@@ -23,7 +24,7 @@ export const ContactForm = () => {
             alert(`${name} is already in contacts.`);
             return;
         } 
-        dispatch(addContact(userBook));
+        dispatch(addContact({name, number}));
         form.reset();
         }
 
